@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo mv /tmp/betty /holberton
+sudo mv /tmp/betty /tmp/holberton
