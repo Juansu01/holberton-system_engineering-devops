@@ -1,2 +1,2 @@
 #!/bin/bash
-chwon --reference=guillaume betty hello
+chwon --from=guillaume betty hello
