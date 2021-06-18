@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displays superstitious numbers.
+# This script does the samething as ls, ignoring the numbers.
 
 for directory in *; do
     echo "$directory" | cut -d "-" -f 2-
