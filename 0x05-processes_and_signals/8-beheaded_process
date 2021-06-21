@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script is kills the highlander process even though it is programmed to ignore the sigterm signal.
 
-kill SIGKILL "$(pgrep -f 4-to_infinity_and_beyond)"
+kill SIGKILL "$(pgrep -f 7-highlander)"
