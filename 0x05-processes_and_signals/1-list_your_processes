@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script is displaying all processes including other users' processes and thos who might not have a TTY.
 
-ps -aux
+ps -e -H u
