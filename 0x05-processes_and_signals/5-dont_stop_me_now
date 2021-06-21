@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script is kills the previous process.
+
+kill $!
