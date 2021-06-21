@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "To infinity and beyond" indefinitely and ignores the "SIGTERM" signal.
+
+trap echo "I am invincible!!!" SIGTERM
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
