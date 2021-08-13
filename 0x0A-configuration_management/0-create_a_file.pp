@@ -1,6 +1,6 @@
 # This file creates a file
-file { '/tmp':
-path    => '/holberton',
+file { 'create file':
+path    => '/tmp/holberton',
 mode    => '0744',
 owner   => 'www-data',
 group   => 'www-data',
