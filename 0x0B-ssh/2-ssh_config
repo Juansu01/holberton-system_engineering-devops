@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This is my configuration file for my server
+Host *
+        IdentityFile ~/.ssh/holberton
+        PasswordAuthentication no
