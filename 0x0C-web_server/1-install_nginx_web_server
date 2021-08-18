@@ -2,5 +2,5 @@
 # This script installs nginx and changes the html file created by it.
 sudo apt-get update -y
 sudo apt-get install nginx -y
-echo "Holberton School" > sudo /var/www/html/index.nginx-debian.html
+echo "Holberton Schools" > /var/www/html/index.nginx-debian.html
 sudo service nginx restart
