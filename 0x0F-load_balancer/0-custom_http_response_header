@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script installs nginx and adds custom header
+apt-get -y update
+apt-get -y install nginx
+my_custom_header="add_header X-Served-By $HOSTNAME;"
+sed -i "/sendfile on;/a $my_custom_header" /etc/nginx/nginx.conf
+service nginx restart
