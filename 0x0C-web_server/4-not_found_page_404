@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script installs nginx and changes the html file created by it.
+sudo apt-get update -y
+sudo apt-get install nginx -y
+mystr="rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i "37i $mystr" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+myotherstr="    error_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\t\t\nroot /usr/share/nginx/html;\n\t\tinternal;\n\t}"
+sed -i "/server_name _;/a $myotherstr" /etc/nginx/sites-enabled/default
+service nginx restart
