@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script creates a mysql backup
+pass=$1
+mysqldump -u root -p"$pass" --all-databases > backup.sql
+tar cfz "$(date +%d-%m-%Y)".tar.gz backup.sql
