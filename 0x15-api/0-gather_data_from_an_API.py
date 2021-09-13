@@ -23,7 +23,7 @@ if __name__ == "__main__":
             completed_tasks += 1
             complete_tasks_list.append(task.get("title"))
         total_tasks += 1
-    print("Employee {} is done with tasks({}/{})".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         user_name, completed_tasks, total_tasks))
     for task in complete_tasks_list:
         print("\t {}".format(task))
