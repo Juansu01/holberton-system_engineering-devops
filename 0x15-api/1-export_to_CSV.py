@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """This module returns information about an employee."""
 if __name__ == "__main__":
-    import requests
-    import json
-    from sys import argv
     import csv
+    import requests
+    from sys import argv
 
     users = requests.get("https://jsonplaceholder.typicode.com/users").json()
     todos = requests.get("https://jsonplaceholder.typicode.com/todos").json()
