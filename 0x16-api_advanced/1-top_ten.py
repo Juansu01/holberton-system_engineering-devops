@@ -8,7 +8,7 @@ def top_ten(subreddit):
     "Get the top 10 subreddit titles"
     my_header = {'User-agent': 'Mozilla/5.0'}
     r = requests.get(
-        'https://www.reddit.com/r/{}/top.json?limit=10'.format(
+        'https://www.reddit.com/r/{}/hot.json?limit=10'.format(
             subreddit), headers=my_header)
     if r.json().get('message') == "Not Found":
         print("None")
