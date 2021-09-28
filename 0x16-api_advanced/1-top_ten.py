@@ -10,8 +10,8 @@ def top_ten(subreddit):
     r = requests.get(
         'https://www.reddit.com/r/{}/top.json?limit=10'.format(
             subreddit), headers=my_header)
-    if r.status_code != 200:
-        return 0
-
-    for val in r.json()['data']['children']:
-        print(val['data']['title'])
+    if r.json()['data']['after'] == None:
+        print(None)
+    else:
+        for val in r.json()['data']['children']:
+            print(val['data']['title'])
