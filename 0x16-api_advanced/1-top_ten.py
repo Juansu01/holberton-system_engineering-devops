@@ -10,7 +10,7 @@ def top_ten(subreddit):
     r = requests.get(
         'https://www.reddit.com/r/{}/top.json?limit=10'.format(
             subreddit), headers=my_header)
-    if r.json()['data']['children'] == []:
+    if r.json().get('message') == "Not Found":
         print("None")
     else:
         for val in r.json()['data']['children']:
