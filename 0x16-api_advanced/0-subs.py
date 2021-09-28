@@ -14,6 +14,3 @@ def number_of_subscribers(subreddit):
     to_json = r.json()
     my_data = to_json['data']['subscribers']
     return my_data
-
-
-print(number_of_subscribers("programming"))
