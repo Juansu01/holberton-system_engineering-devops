@@ -4,7 +4,7 @@ exec { "change workers":
         provider => 'shell',
 }
 exec { "increment open files":
-        command => "sed -i 's/ULIMIT="-n 15"/ULIMIT="-n 2100"/g' /etc/default/nginx",
+        command => "sed -i s/15/2000/ /etc/default/nginx",
         provider => 'shell',
 }
 # Restart the nginx service
